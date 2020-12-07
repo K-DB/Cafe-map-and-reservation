@@ -1,0 +1,450 @@
+<!-- changing -->
+
+
+
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CBNU CLASS</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.11/c3.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.11/c3.min.js"></script>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="https://kit.fontawesome.com/3e387fa279.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.11/c3.min.css" />
+    <link rel="shortcut icon" type="image/ico" href="img/logo.svg" />
+
+</head>
+
+
+<body class="hidden">
+
+    <header>
+        <nav id="nav" class="nav1">
+
+            <div class="container-nav">
+
+                <!-- <div class="logo">
+                    <img src="img/logo.svg" alt="logo">
+                </div> -->
+                <div class="logo">
+                    <a href="index.html"><button id="nav_logo"><img src="img/logo.svg" alt="logo"></button></a>
+                </div>
+
+                <div class="links" id="links">
+                    <a href="#" id="link-intro" class="btn-header">INTRO</a>
+                    <a href="#" id="link-about" class="btn-header">ABOUT</a>
+                    <a href="#" id="link-map" class="btn-header">MAP</a>
+                    <a href="#" id="link-find" class="btn-header">FIND</a>
+                    <a href="#" id="link-recipe" class="btn-header">RECIPE</a>
+                    <a href="#" id="link-contact" class="btn-header">CONTACT</a>
+                    <a href="#" id="login" class="btn-header"><button class="signin"
+                            onclick="document.getElementById('id01').style.display='block'"
+                            style=" width:auto;">Login</button></a>
+                </div>
+
+                <div class="icon" id="open">&#9776;</div>
+
+            </div>
+
+        </nav>
+
+        <div class="texts">
+            <div class="CBNU_CLASS">
+                <img src="img/CBNU_CLASS.png" alt="cafe">
+            </div>
+            <h2>Aziz is the love</h2>
+        </div>
+
+    </header>
+
+    <main>
+        <!-- ABOUT -->
+        <section class="aboutUs" id="about">
+            <div class="container" id="about_text">
+                <h3>CBNU CLASS!</h3>
+                <p class="after">WE ARE THE BEST</p>
+                <div class="services">
+                    <div class="box-services">
+                        <img src="img/kim.png" alt="Seobin Kim">
+                        <h4>Seobin Kim(22)</h4>
+                        <p><b>Dept. of Computer Science 18th</b></p>
+                    </div>
+
+                    <div class="box-services">
+                        <img src="img/Oh.png" alt="Raekyu Oh">
+                        <h4>Raekyu Oh(24)</h4>
+                        <p><b>Dept. of Computer Science 16th</b></p>
+                    </div>
+
+                    <div class="box-services">
+                        <img src="img/moon.png" alt="Jaesik Moon">
+                        <h4>Jaesik Moon(24)</h4>
+                        <p><b>Dept. of Computer Science 16th</b></p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <hr>
+        <!-- MAP -->
+        <section class="maps container" id="map">
+
+            <h3>CAFE MAP</h3>
+            <br>
+            <div class="text-center">
+                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modalRegular">
+                    Check by congestion</button>
+                
+                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modalCustom">
+                    Check by scale
+                </button>
+              
+              </div>
+              <br><br>
+              <!--Modal: Name-->
+              <div class="modal fade" id="modalRegular" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+              
+                  <!--Content-->
+                  <div class="modal-content">
+              
+                    <!--Body-->
+                    <div class="modal-body mb-0 p-0">
+              
+                      <!--Google map-->
+                      <div id="map-container-google-16" class="z-depth-1-half map-container-9" style="height: 400px">
+                        <iframe src="https://maps.google.com/maps?q=new%20delphi&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                          frameborder="0" style="border:0" allowfullscreen></iframe>
+                      </div>
+              
+                    </div>
+                    
+                    <div class="detail">
+                        <ul>
+                            <li><img src="img/free.png">Not crowded</li>
+                            <li><img src="img/normal.png">Normal</li>
+                            <li><img src="img/full.png">Very crowded</li>
+                        </ul>
+                    </div>
+              
+                    <!--Footer-->
+                    <div class="modal-footer justify-content-center">
+                        <button type="button" class="btn btn-outline-info btn-md" data-dismiss="modal">Close <i class="fas fa-times ml-1"></i></button>
+              
+                    </div>
+              
+                  </div>
+                  <!--/.Content-->
+              
+                </div>
+              </div>
+                           
+              
+              <!--Modal: Name-->
+              <div class="modal fade" id="modalCustom" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+              
+                  <!--Content-->
+                  <div class="modal-content">
+              
+                    <!--Body-->
+                    <div class="modal-body mb-0 p-0">
+              
+                      <!--Google map-->
+                      <div id="map-container-google-18" class="z-depth-1-half map-container-11"  style="height: 400px">
+                        <iframe src="https://maps.google.com/maps?q=los%20angeles&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                          frameborder="0" style="border:0" allowfullscreen></iframe>
+                      </div>
+              
+                    </div>
+                    <div class="detail">
+                        <ul>
+                            <li><img src="img/big.png">Cafe size is Big</li>
+                            <li><img src="img/small.png">Cafe size is Small</li>
+                        </ul>
+                    </div>
+                    <!--Footer-->
+                    <div class="modal-footer justify-content-center">
+                        <button type="button" class="btn btn-outline-secondary btn-md" data-dismiss="modal">Close <i class="fas fa-times ml-1"></i></button>
+              
+                    </div>
+              
+                  </div>
+                  <!--/.Content-->
+              
+                </div>
+              </div>
+              <!--Modal: Nam-->
+              <div id="mapp" style="width:100%; height: 500px;"></div>
+
+              <div class="map-explain">
+                <ul>
+                    <li><img src="img/seomun.png">SEOMUN</li>
+                    <li><img src="img/jeongmun.png">JEONGMUN</li>
+                    <li><img src="img/jungmun.png">JUNGMUN</li>
+                    <li><img src="img/whomun.png">HUMUN</li>
+                </ul>
+            </div>
+        </section>
+
+        <hr>
+        <!-- FIND -->
+        <section class="findCafe container" id="find">
+            <h3>The congestion level of a Cafe</h3>
+            <p class="after">Find cafe!</p>
+            <div class="buttons-cafe">
+                <ul>
+                    <li class="filter active" id="find_all" data-name="all">ALL</li>
+                    <li class="filter" id="find_free" data-name="free">FREE</li>
+                    <li class="filter" id="find_normal" data-name="normal">NORMAL</li>
+                    <li class="filter" id="find_full" data-name="full">FULL</li>
+                </ul>
+            </div>
+
+            <div class="gallery-cafe">
+                <div class="cont-cafe free">
+                    <div class="img-cafe">
+                        <img src="img/hollys.png" alt="free 1">
+                    </div>
+                    <div class="texts-cafe">
+                        <h4><b>Hollys in Jeoungmun</b></h4>
+                    </div>
+                </div>
+
+                <div class="cont-cafe free">
+                    <div class="img-cafe">
+                        <img src="img/cafe203.jpg" alt="free 2">
+                    </div>
+                    <div class="texts-cafe">
+                        <h4><b>CAFE203</b></h4>
+                    </div>
+                </div>
+
+                <div class="cont-cafe free">
+                    <div class="img-cafe">
+                        <img src="img/yourbam.jpg" alt="free 3">
+                    </div>
+                    <div class="texts-cafe">
+                        <h4><b>Your Bam</b></h4>
+                    </div>
+                </div>
+
+
+                <div class="cont-cafe free">
+                    <div class="img-cafe">
+                        <img src="img/arte.jpg" alt="free 4">
+                    </div>
+                    <div class="texts-cafe">
+                        <h4><b>Arte</b></h4>
+                    </div>
+                </div>
+
+                <div class="cont-cafe normal">
+                    <div class="img-cafe">
+                        <img src="img/pascucci.png" alt="normal 1">
+                    </div>
+                    <div class="texts-cafe">
+                        <h4><b>Passcucci in Jungmun</b></h4>
+                    </div>
+                </div>
+
+                <div class="cont-cafe normal">
+                    <div class="img-cafe">
+                        <img src="img/ediya.png" alt="normal 2">
+                    </div>
+                    <div class="texts-cafe">
+                        <h4><b>Ediya in Whomun</b></h4>
+                    </div>
+                </div>
+
+
+                <div class="cont-cafe full">
+                    <div class="img-cafe">
+                        <img src="img/humin.jpg" alt="full 1">
+                    </div>
+                    <div class="texts-cafe">
+                        <h4><b>Cafe Humin</b></h4>
+                    </div>
+                </div>
+
+                <div class="cont-cafe full">
+                    <div class="img-cafe">
+                        <img src="img/starbucks.png" alt="full 2">
+                    </div>
+                    <div class="texts-cafe">
+                        <h4><b>Starbucks in Jungmun</b></h4>
+                    </div>
+                </div>
+
+                <div class="cont-cafe full">
+                    <div class="img-cafe">
+                        <img src="img/pascucci.png" alt="full 3">
+                    </div>
+                    <div class="texts-cafe">
+                        <h4><b>Passcucci in Whomun</b></h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GRAPH -->
+        <section class="graphs" id="graph">
+
+            <img src="img/weekly_hotplace.png" width="800px" height="100px"/>
+            <br>
+            <div style="height: 500px; width: 500px; margin: auto" id="piechart"></div>
+
+        </section>
+
+        <!-- RECIPE  -->
+        <section class="recipes container" id="recipe">
+
+            <h3>Home Cafe Recipes</h3>
+            <p class="after">Enjoy your home life!</p>
+
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ul class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                    <li data-target="#myCarousel" data-slide-to="4"></li>
+                </ul>
+
+                <!-- The slideshow -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active" id="crusItem0">
+                        <img src="img/recipe_1.png" alt="Los Angeles" width="1100" height="500">
+                    </div>
+                    <div class="carousel-item" id="crusItem1">
+                        <img src="img/recipe_2.png" alt="Chicago" width="1100" height="500">
+                    </div>
+                    <div class="carousel-item" id="crusItem2">
+                        <img src="img/recipe_3.png" alt="New York" width="1100" height="500">
+                    </div>
+                    <div class="carousel-item" id="crusItem3">
+                        <img src="img/recipe_4.png" alt="New York" width="1100" height="500">
+                    </div>
+                    <div class="carousel-item" id="crusIte45">
+                        <img src="img/recipe_5.png" alt="New York" width="1100" height="500">
+                    </div>
+                </div>
+
+                <!-- Left and right controls -->
+                <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer id="contact">
+        <div class="footer container">
+            <div class="brand-logo">
+                <img src="img/logo.svg" alt="logo">
+            </div>
+
+            <div class="icons">
+
+                <a href="https://instagram.com/s__bnnandout?igshid=1u3uk28hy29zq" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <a href="https://www.facebook.com/profile.php?id=100008070583596" target="_blank">
+                    <i class="fab fa-facebook"></i>
+                </a>
+
+                <a href="https://google.com" target="_blank">
+                    <i class="fab fa-spotify"></i>
+                </a>
+
+                <a href="https://www.youtube.com/watch?v=N1N53Bq9W44"
+                    target="_blank">
+                    <i class="fab fa-youtube"></i>
+                </a>
+
+            </div>
+
+            <p>Thank you</p>
+        </div>
+    </footer>
+
+
+
+    <div id="id01" class="modal">
+
+        <form class="modal-contents animate" action="/action_page.php">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                    title="Close Modal">&times;</span>
+                <img src="img/images.jfif" alt="Avatar" class="avatar">
+            </div>
+
+            <div class="inputContainer" >
+                <label for="uname" style="margin-right: 4px"><strong>Username</strong></label>
+                <input style="border-radius: 8px ;" type="text" placeholder="Enter Username" name="uname" required>
+
+                <p> </p>
+
+                <label for="psw" style="margin-right: 4px"><b>Password</b></label>
+                <input style="border-radius: 8px ;" type="password" placeholder="Enter Password" name="psw" required>
+                <p> </p>
+                <label id="check"><input type="checkbox" checked="choice" name="remember" />Remember me</label>
+                <p> </p>
+                <a id="popup-login" href="main_login.html"><img src="img/login1.jpg" width="172" height="40"/></a>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        var pieData = {
+            TWOSOME_in_Jungmun: 30,
+            Humin: 25,
+            Compose: 14,
+            Pascucci_in_Jungmun: 11,
+            TWOSOME_in_Seonghwa: 6,
+            Holly_in_Seonghwa: 6,
+            Other: 8
+        };
+        var chartDonut = c3.generate({
+            bindto: "#piechart",
+            data: {
+                json: [pieData],
+                keys: {
+                    value: Object.keys(pieData),
+                },
+                type: "donut",
+            },
+            donut: {
+                title: "Weekly Hotplace",
+            },
+        });
+    </script>
+    <script src="js/jquery.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/filtro.js"></script>
+    <script src="js/map.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDODEyrk6W5WbO67D9GMlWuczoCeA9zGAU&callback=myMap"></script>
+</body>
+
+</html>
