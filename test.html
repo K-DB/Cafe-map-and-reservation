@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <style>
+        /* Make the image fully responsive */
+        .carousel-inner img {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container mt-3">
+        <h2>Carousel Methods</h2>
+        <p>The <strong>number</strong> method goes to a specified item in the carousel (zero-based: first item is 0,
+            second item is 1, etc..).</p>
+        <button type="button" id="myBtn" class="btn btn-success">Go to second item (1)</button>
+        <button type="button" id="myBtn2" class="btn btn-danger">Go to third item (2)</button>
+
+        <!-- The carousel  -->
+        <div id="myCarousel" class="carousel slide mt-4" data-interval="2000">
+
+            <!-- Indicators  -->
+            <ul class="carousel-indicators">
+                <li class="item1 active"></li>
+                <li class="item2"></li>
+                <li class="item3"></li>
+                <li class="item4"></li>
+                <li class="item5"></li>
+            </ul>
+
+            <!-- The slideshow -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/a1.jpg" alt="Los Angeles" width="1100" height="500">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/a2.jpg" alt="Chicago" width="1100" height="500">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/a3.jpg" alt="New York" width="1100" height="500">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/a4.jpg" alt="New York" width="1100" height="500">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/a5.jpg" alt="New York" width="1100" height="500">
+                </div>
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="carousel-control-prev" href="#myCarousel">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+
+        <div id="drink_menu">
+            <ul class="drink__list rsList">
+                <li class="drink__item select" id="crusItem1">
+                    <a href="#drinkDialog1" aria-haspopup="dialog" role="button">
+                        <figure class="drink__figure">
+                            <img src="./img/drink/Ice_Cherry_Blossom_Latte.png" alt="">
+                            <figcaption>Latte with Condensed Milk</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="drink__item select">
+                    <a href="#drinkDialog2" aria-haspopup="dialog" role="button" id="crusItem2">
+                        <figure class="drink__figure">
+                            <img src="./img/drink/hot_Cherry_Blossom_Latte.png" alt="">
+                            <figcaption>pizza</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="drink__item select" id="crusItem3">
+                    <a href="#drinkDialog3" aria-haspopup="dialog" role="button">
+                        <figure class="drink__figure">
+                            <img src="./img/drink/Ice_Brownie_Chocolate.png" alt="">
+                            <figcaption>hamburger ?ùº?ñº</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="drink__item select" id="crusItem4">
+                    <a href="#drinkDialog4" aria-haspopup="dialog" role="button">
+                        <figure class="drink__figure">
+                            <img src="./img/drink/Hot_Brownie_Chocolate.png" alt="">
+                            <figcaption>source</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="drink__item select" id="crusItem5">
+                    <a href="#drinkDialog5" aria-haspopup="dialog" role="button">
+                        <figure class="drink__figure">
+                            <img src="./img/drink/Jeju_Green_Tangerine_Tea.png" alt="">
+                            <figcaption>haha</figcaption>
+                        </figure>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            // Activate the Carousel, but pause it from the start
+            $("#myCarousel").carousel();
+            alert("hi");
+            // Go to the second item
+            $("#crusItem1").click(function () {
+                $("#myCarousel").carousel(0);
+            });
+
+            $("#crusItem2").click(function () {
+                $("#myCarousel").carousel(1);
+            });
+
+            $("#crusItem3").click(function () {
+                $("#myCarousel").carousel(2);
+            });
+
+            $("#crusItem4").click(function () {
+                $("#myCarousel").carousel(3);
+            });
+
+            $("#crusItem5").click(function () {
+                $("#myCarousel").carousel(4);
+            });
+
+            // Enable Carousel Indicators
+            $(".item1").click(function () {
+                $("#myCarousel").carousel(0);
+            });
+            $(".item2").click(function () {
+                $("#myCarousel").carousel(1);
+            });
+            $(".item3").click(function () {
+                $("#myCarousel").carousel(2);
+            });
+            $(".item4").click(function () {
+                $("#myCarousel").carousel(3);
+            });
+            $(".item5").click(function () {
+                $("#myCarousel").carousel(4);
+            });
+
+            // Enable Carousel Controls
+            $(".carousel-control-prev").click(function () {
+                $("#myCarousel").carousel("prev");
+            });
+            $(".carousel-control-next").click(function () {
+                $("#myCarousel").carousel("next");
+            });
+        });
+    </script>
+
+</body>
+
+</html>
