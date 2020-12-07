@@ -1,10 +1,9 @@
-
 function myMap(){
     var myCenter = new google.maps.LatLng(36.629045, 127.456328);
 
-    var humin_whole = new google.maps.LatLng(36.625602, 127.450045);
-    var humin_congestion = new google.maps.LatLng(36.625602, 127.450045);
-    var humin_scale = new google.maps.LatLng(36.625602, 127.450045);
+    var paik_whole = new google.maps.LatLng(36.6342664, 127.4585268);
+    var paik_congestion = new google.maps.LatLng(36.6342664, 127.4585268);
+    var paik_scale = new google.maps.LatLng(36.6342664, 127.4585268);
 
     var starbucks_whole = new google.maps.LatLng(36.634009, 127.459696);
     var starbucks_congestion = new google.maps.LatLng(36.634009, 127.459696);
@@ -37,7 +36,7 @@ function myMap(){
     var ediya_scale = new google.maps.LatLng(36.624939, 127.464799);
 
 
-    var congestionmap = new google.maps.Map(document.getElementById('map-container-google-16'),
+    var congestionmap = new google.maps.Map(document.getElementById('mapp'),
     {
         zoom: 16,
         center: new google.maps.LatLng(36.632306, 127.457403)
@@ -47,7 +46,7 @@ function myMap(){
         zoom: 15,
         center: new google.maps.LatLng(36.632306, 127.457403)
     });
-    var wholemap = new google.maps.Map(document.getElementById('mapp'),
+    var wholemap = new google.maps.Map(document.getElementById('map-container-google-16'),
     {
         zoom: 15.5,
         center: new google.maps.LatLng(36.629066, 127.456339)
@@ -59,7 +58,7 @@ function myMap(){
         
     });
     var wholemarker1 = new google.maps.Marker({
-        position:humin_whole,
+        position:paik_whole,
         icon: 'img/seomun.png',
         clickable: true,  
     });
@@ -111,7 +110,7 @@ function myMap(){
 
 
     var congestionmarker1 = new google.maps.Marker({
-        position:humin_congestion,
+        position:paik_congestion,
         icon: 'img/full.png'
     });
     var congestionmarker2 = new google.maps.Marker({
@@ -154,7 +153,7 @@ function myMap(){
 
 
     var scalemarker1 = new google.maps.Marker({
-        position:humin_scale,
+        position:paik_scale,
         icon: 'img/small.png' 
     });
     var scalemarker2 = new google.maps.Marker({
@@ -231,41 +230,151 @@ function myMap(){
     scalemarker10.setMap(scalemap);
 
     var contentCBNU = '<div>Hi. This is CBNU!</div>'+'<div>I will introduce cafes around the school</div>';
-  
+
+    var cafeImgArr = ['Paik.jpg','starbucks.png','twosome.png','pascucci.png','arte_info.jpg','cafe203.jpg','hollys.png','pascucci.png','ediya.png','yourbam.jpg'];
+    var cafeNameArr = ['Paik Dabang','Starbucks','Twosome Place','Pascucci','Arte Coffe','Cafe 203','Hollys','Pascucci','Ediya','Yourbam'];
+    var cafe = [];
+    var cafeImg = [];
+    var cafeName = [];
+    var resBtn = [];
+    var lafBtn = [];
+    var closeBtn = [];
+    var i;
+    for (i=0; i<10; i++) {
+        cafe[i] = document.createElement('div');
+        cafe[i].style.paddingTop = '10px';
+        cafe[i].style.paddingBottom = '10px';
+        
+    
+        cafeImg[i] = document.createElement('img');
+        cafeImg[i].src = "img/"+cafeImgArr[i];
+        cafeImg[i].width = 150;
+        cafeImg[i].height = 150;
+
+        cafeName[i] = document.createElement('h4');
+        cafeName[i].innerText = cafeNameArr[i];
+    
+        resBtn[i] = document.createElement('button');
+        resBtn[i].className = 'btn btn-outline-info btn-md';
+        resBtn[i].style = 'width: 140px';
+        resBtn[i].innerText = 'Reservation';
+        
+        lafBtn[i] = document.createElement('button');
+        lafBtn[i].className = 'btn btn-outline-info btn-md';
+        lafBtn[i].style = 'width: 140px';
+        lafBtn[i].innerText = 'Lost_and_Found';
+    
+    
+        cafe[i].append(cafeImg[i], cafeName[i], resBtn[i], lafBtn[i]/*, closeBtn[i]*/);
+    }
+    resBtn[0].onclick = function() {
+        Reservation0();
+    };
+    lafBtn[0].onclick = function() {
+        Lost_and_Found0();
+    };
+    resBtn[1].onclick = function() {
+        Reservation1();
+    };
+    lafBtn[1].onclick = function() {
+        Lost_and_Found1();
+    };
+    resBtn[2].onclick = function() {
+        Reservation2();
+    };
+    lafBtn[2].onclick = function() {
+        Lost_and_Found2();
+    };
+    resBtn[3].onclick = function() {
+        Reservation3();
+    };
+    lafBtn[3].onclick = function() {
+        Lost_and_Found3();
+    };
+    resBtn[4].onclick = function() {
+        Reservation4();
+    };
+    lafBtn[4].onclick = function() {
+        Lost_and_Found4();
+    };
+    resBtn[5].onclick = function() {
+        Reservation5();
+    };
+    lafBtn[5].onclick = function() {
+        Lost_and_Found5();
+    };
+    resBtn[6].onclick = function() {
+        Reservation6();
+    };
+    lafBtn[6].onclick = function() {
+        Lost_and_Found6();
+    };
+    resBtn[7].onclick = function() {
+        Reservation7();
+    };
+    lafBtn[7].onclick = function() {
+        Lost_and_Found7();
+    };
+    resBtn[8].onclick = function() {
+        Reservation8();
+    };
+    lafBtn[8].onclick = function() {
+        Lost_and_Found8();
+    };
+    resBtn[9].onclick = function() {
+        Reservation9();
+    };
+    lafBtn[9].onclick = function() {
+        Lost_and_Found9();
+    };
+    for (i=0; i<10; i++) {
+        cafe[i].append(cafeName[i], resBtn[i], lafBtn[i]);
+    }
+    
     var infowindow = new google.maps.InfoWindow({
         content: contentCBNU        
     });
     var infowindow1 = new google.maps.InfoWindow({
-        content: "Cafe Humin"      
+        content: cafe[0],
+        maxWidth:200,
     });
     var infowindow2 = new google.maps.InfoWindow({
-        content: "Starabucks"      
+        content: cafe[1],
+        maxWidth:200
     });
     var infowindow3 = new google.maps.InfoWindow({
-        content: "A Twosome Place"      
+
+        content: cafe[2],
+        maxWidth:200
     });
     var infowindow4 = new google.maps.InfoWindow({
-        content: "Caffe Pascucci in Jungmoon"      
+        content: cafe[3],
+        maxWidth:200   
     });
     var infowindow5 = new google.maps.InfoWindow({
-        content: "Arte Coffe"      
+        content: cafe[4],
+        maxWidth:200       
     });
     var infowindow6 = new google.maps.InfoWindow({
-        content: "Cafe 203"      
+        content: cafe[5],
+        maxWidth:200 
     });
     var infowindow7 = new google.maps.InfoWindow({
-        content: "Hollys"      
+        content: cafe[6],
+        maxWidth:200 
     });
     var infowindow8 = new google.maps.InfoWindow({
-        content: "Caffe Pascucci in Whomoon"      
+        content: cafe[7],
+        maxWidth:200  
     });
     var infowindow9 = new google.maps.InfoWindow({
-        content: "Ediya in Whomoon"      
+        content: cafe[8],
+        maxWidth:200    
     });
     var infowindow10 = new google.maps.InfoWindow({
-        content: "Yourbam"      
+        content: cafe[9],
+        maxWidth: 200     
     });
-   
 
     wholemarker.addListener('click', function() {
         // ��Ŀ ���� ���������츦 ǥ���մϴ�
@@ -311,46 +420,77 @@ function myMap(){
         // ��Ŀ ���� ���������츦 ǥ���մϴ�
         infowindow10.open(wholemap,wholemarker10);
     });
+
     
-    congestionmarker1.addListener('click', function() {
-        infowindow1.open(wholemap,congestionmarker1);
+    congestionmarker1.addListener('mouseover', function() {
+        infowindow1.open(wholemap,this);
     });
+    cafe[0].onmouseleave = function() {
+        infowindow1.close();
+    };
+    congestionmarker2.addListener('mouseover', function() {
+        
+        infowindow2.open(wholemap,this);
+    });
+    cafe[1].onmouseleave = function() {
+        infowindow2.close();
+    };
 
-    congestionmarker2.addListener('click', function() {
-        infowindow2.open(wholemap,congestionmarker2);
+    congestionmarker3.addListener('mouseover', function() {
+        infowindow3.open(wholemap,this);
     });
+    cafe[2].onmouseleave = function() {
+        infowindow3.close();
+    };
 
-    congestionmarker3.addListener('click', function() {
-        infowindow3.open(wholemap,congestionmarker3);
+    congestionmarker4.addListener('mouseover', function() {
+        infowindow4.open(wholemap,this);
     });
+    cafe[3].onmouseleave = function() {
+        infowindow4.close();
+    };
 
-    congestionmarker4.addListener('click', function() {
-        infowindow4.open(wholemap,congestionmarker4);
+    congestionmarker5.addListener('mouseover', function() {
+        infowindow5.open(wholemap,this);
     });
+    cafe[4].onmouseleave = function() {
+        infowindow5.close();
+    };
 
-    congestionmarker5.addListener('click', function() {
-        infowindow5.open(wholemap,congestionmarker6);
+    congestionmarker6.addListener('mouseover', function() {
+        infowindow6.open(wholemap,this);
     });
+    cafe[5].onmouseleave = function() {
+        infowindow6.close();
+    };
 
-    congestionmarker6.addListener('click', function() {
-        infowindow6.open(wholemap,congestionmarker6);
+    congestionmarker7.addListener('mouseover', function() {
+        infowindow7.open(wholemap,this);
     });
+    cafe[6].onmouseleave = function() {
+        infowindow7.close();
+    };
 
-    congestionmarker7.addListener('click', function() {
-        infowindow7.open(wholemap,congestionmarker7);
+    congestionmarker8.addListener('mouseover', function() {
+        infowindow8.open(wholemap,this);
     });
+    cafe[7].onmouseleave = function() {
+        infowindow8.close();
+    };
 
-    congestionmarker8.addListener('click', function() {
-        infowindow8.open(wholemap,congestionmarker8);
+    congestionmarker9.addListener('mouseover', function() {
+        infowindow9.open(wholemap,this);
     });
+    cafe[8].onmouseleave = function() {
+        infowindow9.close();
+    };
 
-    congestionmarker9.addListener('click', function() {
-        infowindow9.open(wholemap,congestionmarker9);
+    congestionmarker10.addListener('mouseover', function() {
+        infowindow10.open(wholemap,this);
     });
-
-    congestionmarker10.addListener('click', function() {
-        infowindow10.open(wholemap,congestionmarker10);
-    });
+    cafe[9].onmouseleave = function() {
+        infowindow10.close();
+    };
 
     
     scalemarker1.addListener('click', function() {
@@ -393,5 +533,7 @@ function myMap(){
         infowindow10.open(wholemap,scalemarker10);
     });
 
-}
 
+    
+
+}
