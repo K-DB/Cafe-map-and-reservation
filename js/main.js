@@ -39,6 +39,86 @@ function opening() {
     }
 }
 
+function Reservation0(){
+    alert("hello");
+}
+
+function Reservation1(){
+    alert("hello");
+}
+
+function Reservation2(){
+    alert("hello");
+}
+
+function Reservation3(){
+    alert("hello");
+}
+
+function Reservation4(){
+    alert("hello");
+}
+
+function Reservation5(){
+    alert("hello");
+}
+
+function Reservation6(){
+    alert("hello");
+}
+
+function Reservation7(){
+    alert("hello");
+}
+
+function Reservation8(){
+    alert("hello");
+}
+
+function Reservation9(){
+    alert("hello");
+}
+
+function Lost_and_Found0(){
+    alert("hello");
+}
+
+function Lost_and_Found1(){
+    alert("hello");
+}
+
+function Lost_and_Found2(){
+    alert("hello");
+}
+
+function Lost_and_Found3(){
+    alert("hello");
+}
+
+function Lost_and_Found4(){
+    alert("hello");
+}
+
+function Lost_and_Found5(){
+    alert("hello");
+}
+
+function Lost_and_Found6(){
+    alert("hello");
+}
+
+function Lost_and_Found7(){
+    alert("hello");
+}
+
+function Lost_and_Found8(){
+    alert("hello");
+}
+
+function Lost_and_Found9(){
+    alert("hello");
+}
+
 window.addEventListener('load', menus);
 
 window.addEventListener('click', function (e) {
@@ -67,7 +147,7 @@ opend.addEventListener('click', opening);
 
 var pieData = {
     TWOSOME_in_Jungmun: 30,
-    Humin: 25,
+    Paik: 25,
     Compose: 14,
     Pascucci_in_Jungmun: 11,
     TWOSOME_in_Seonghwa: 6,
