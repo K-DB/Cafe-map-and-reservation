@@ -40,43 +40,53 @@ function opening() {
 }
 
 function Reservation0(){
-    alert("hello");
+    //alert("hello");
+    location.href="reservation.html";
 }
 
 function Reservation1(){
-    alert("hello");
+    //alert("hello");
+    location.href="reservation.html";
 }
 
 function Reservation2(){
-    alert("hello");
+    //alert("hello");
+    location.href="reservation.html";
 }
 
 function Reservation3(){
-    alert("hello");
+    //alert("hello");
+    location.href="reservation.html";
 }
 
 function Reservation4(){
-    alert("hello");
+    //alert("hello");
+    location.href="reservation.html";
 }
 
 function Reservation5(){
-    alert("hello");
+    //alert("hello");
+    location.href="reservation.html";
 }
 
 function Reservation6(){
-    alert("hello");
+    //alert("hello");
+    location.href="reservation.html";
 }
 
 function Reservation7(){
-    alert("hello");
+    //alert("hello");
+    location.href="reservation.html";
 }
 
 function Reservation8(){
-    alert("hello");
+    //alert("hello");
+    location.href="reservation.html";
 }
 
 function Reservation9(){
-    alert("hello");
+    //alert("hello");
+    location.href="reservation.html";
 }
 
 function Lost_and_Found0(){

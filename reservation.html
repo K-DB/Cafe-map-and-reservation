@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta>
+    <title>book seat</title>
+    <link rel="stylesheet" href="css/reservation.css">
+    <script type="text/javascript" src="js/reservation.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+
+    <style>
+    
+    .seatCharts-cell{
+        color: #182C4E;
+	    height: 25px;
+	    width: 25px;
+        line-height: 25px;
+        display: inline-block;
+    }
+    .seatCharts-seat{
+        color: #FFFFFF;
+        cursor: pointer;
+        /*background-color: green;*/
+	    color: #fff;
+	    -webkit-border-radius: 5px;
+	    -moz-border-radius: 5px;
+	    border-radius: 5px;
+        cursor: default;
+    }
+    .seatCharts-seat.available{
+        background-color: #B9DEA0;
+    }
+    .seatCharts-seat.booked{
+        background-color: #472B34;
+    }
+    .seatCharts-seat.selected{
+        background-color: #E6CAC4;
+    }
+    .seatCharts-cell.seatCharts-seat.available{
+        list-style-type: none;
+        vertical-align: middle;
+    }
+    .seatCharts-cell.seatCharts-seat.booked{
+        list-style-type: none;
+        vertical-align: middle;
+    }
+    .seatCharts-cell.seatCharts-seat.selected{
+        list-style-type: none;
+        vertical-align: middle;
+    }
+    .seatCharts-legendDescription{
+        margin-left: 5px;
+        line-height: 30px;
+        vertical-align: middle;
+    }
+    
+    </style>
+</head>
+
+  <body>
+    <header style="height: 200px;">
+        <nav id="nav" class="nav1">
+
+            <div class="container-nav">
+
+                <!-- <div class="logo">
+                    <img src="img/logo.svg" alt="logo">
+                </div> -->
+                <div class="logo">
+                    <a href="index.html"><button id="nav_logo"><img src="img/logo.svg" alt="logo"></button></a>
+                </div>
+
+                <div class="links" id="links">
+                    <a href="#" id="link-intro" class="btn-header">INTRO</a>
+                    <a href="#" id="link-about" class="btn-header">ABOUT</a>
+                    <a href="#" id="link-map" class="btn-header">MAP</a>
+                    <a href="#" id="link-find" class="btn-header">FIND</a>
+                    <a href="#" id="link-recipe" class="btn-header">RECIPE</a>
+                    <a href="#" id="link-contact" class="btn-header">CONTACT</a>
+                    <a href="#" id="login" class="btn-header"><button class="signin"
+                            onclick="document.getElementById('id01').style.display='block'"
+                            style=" width:auto;">Login</button></a>
+                </div>
+
+                <div class="icon" id="open">&#9776;</div>
+
+            </div>
+
+        </nav>
+    </header>
+
+    <div class="wrapper">
+        <div class="container">
+      
+            <table id="seat">
+              <script>
+              //seating arrangement
+              var index = 0;
+      
+              for(var i=0; i<5;i++){
+                document.write("<tr>");
+                for(var j=0;j<10;j++){
+                  document.write('<td onclick="changeImage(' + index +')"> <img class="image" src="img/empty.png" />'
+                  + '<br />' + seat_number[index] +  '</td>');
+                  index++;
+                }
+              }
+              </script>
+            </table>
+          </div>
+      
+          <div class="info">
+            <ul>
+              <li id="available">
+                <!--<img src="img/empty.png" alt="">Available Seat</li>-->
+                <div class="seatCharts-cell seatCharts-seat available"></div>
+                <span class="seatCharts-legendDescription">Available seat</span>
+              <li id="booked">
+                <!--<img src="img/already.png" alt="">Booked Seat</li>-->
+                <div class="seatCharts-cell seatCharts-seat booked"></div>
+                <span class="seatCharts-legendDescription">Unavailable seat</span>
+              <li id="selected">
+                <!--<img src="img/select.png" alt="">Selected Seat</li>-->
+                <div class="seatCharts-cell seatCharts-seat selected"></div>
+                <span class="seatCharts-legendDescription">Selected seat</span>
+            </ul>
+            <br><br>
+            <div class="btn">
+                <button type="button" id="book_btn" onclick="booking()">Book Now</button>
+            </div>
+          </div>
+    </div>
+    
+
+  </body>
+</html>
