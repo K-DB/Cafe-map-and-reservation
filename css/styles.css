@@ -22,6 +22,7 @@
 body {
     font-family: 'Roboto', sans-serif;;
     background: var(--background);
+    background-color: white;
 }
 
 img {
@@ -307,7 +308,7 @@ position:absolute;
 }
 /* RECIPE */
 
-/* ¿©±âºÎÅÍ carousel Ãß°¡ */
+/* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ carousel ï¿½ß°ï¿½ */
 .carousel-inner img {
     width: 100%;
     height: 100%;
@@ -319,10 +320,10 @@ position:absolute;
         display: none;
     }
 }
-/* ¿©±â±îÁö */
+/* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */
 
 
-/* ¿©±â±îÁö */
+/* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */
 
 .buttons-cafe {
     overflow: hidden;
