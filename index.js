@@ -2,6 +2,21 @@ var http = require('http');
 var fs = require('fs');
 var path = require('path');
 
+const mysql      = require('mysql');
+const dbconfig   = require('./js/db.js');
+const connection = mysql.createConnection(dbconfig);
+
+// connection.connect();
+
+// connection.query('SELECT * from Users', (error, rows, fields) => {
+//     if (error) throw error;
+//     console.log('User info is: ', rows);
+//   });
+  
+//   connection.end();
+
+
+
 http.createServer(function (request, response) {
     console.log('request ', request.url);
 
