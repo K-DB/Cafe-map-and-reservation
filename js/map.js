@@ -244,25 +244,32 @@ function myMap(){
         cafe[i] = document.createElement('div');
         cafe[i].style.paddingTop = '10px';
         cafe[i].style.paddingBottom = '10px';
-        
+        cafe[i].style.display='inline';
     
         cafeImg[i] = document.createElement('img');
         cafeImg[i].src = "img/"+cafeImgArr[i];
         cafeImg[i].width = 150;
         cafeImg[i].height = 150;
+        cafeImg[i].style.display='inline-block';
 
         cafeName[i] = document.createElement('h4');
         cafeName[i].innerText = cafeNameArr[i];
-    
+        cafeName[i].style.fontFamily='Impact, Charcoal, sans-serif';
+        cafeName[i].style.margin='10px'
+
         resBtn[i] = document.createElement('button');
         resBtn[i].className = 'btn btn-outline-info btn-md';
-        resBtn[i].style = 'width: 140px';
         resBtn[i].innerText = 'Reservation';
-        
+        resBtn[i].style.width = '140px';
+        resBtn[i].style.marginBottom = '10px';
+        resBtn[i].style.display='inline';
+
         lafBtn[i] = document.createElement('button');
         lafBtn[i].className = 'btn btn-outline-info btn-md';
         lafBtn[i].style = 'width: 140px';
-        lafBtn[i].innerText = 'Lost_and_Found';
+        lafBtn[i].innerText = 'Lost_and_Found';        
+        lafBtn[i].style.display='inline';
+
     
     
         cafe[i].append(cafeImg[i], cafeName[i], resBtn[i], lafBtn[i]/*, closeBtn[i]*/);
